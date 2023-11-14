@@ -57,7 +57,9 @@ public:
             registers[operand1] = memory.read(operand2);
             break;
 
-        case 0x2: // LOAD (immediate)
+        case 0x2:
+            
+            // LOAD (immediate)
             registers[operand1] = operand2;
             break;
 
