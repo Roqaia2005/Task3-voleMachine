@@ -3,7 +3,8 @@
 #include <iomanip>
 #include <vector>
 using namespace std;
-class Memory {
+class Memory
+{
 private:
     int size;
     vector<int> data;
@@ -16,12 +17,10 @@ public: //constructor set size for memory size and initial values zeros
         if (address >= 0 && address < size) {
             return data[address];
         } else {
-            cout << " invalid memory address " << address << endl;
-        
-        }
+            cout << " invalid memory address " << address << endl;}
         return 0;
     }
-// function to put value in some address at the memory
+//  function to put value in some address at the memory
     void write(int address, int value) {
         if (address >= 0 && address < size) {
             data[address] = value;
