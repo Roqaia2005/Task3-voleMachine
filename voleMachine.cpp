@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iomanip>
 #include <vector>
-using namespace std; 
+using namespace std;
 class Memory {
 private:
     int size;
