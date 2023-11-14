@@ -6,17 +6,16 @@ using namespace std;
 class Memory
 {
 private:
-    int size;
-    vector<int> data;
+ int size;
+vector<int> data;
 public: //constructor set size for memory size and initial values zeros
     Memory(int memorySize) : size(memorySize), data(memorySize,0) {
-
     }
 // function to read address from memory
     int read(int address) {
         if (address >= 0 && address < size) {
             return data[address];
-        } else {
+          } else {
             cout << " invalid memory address " << address << endl;}
         return 0;
     }
@@ -50,7 +49,6 @@ public:
         operand1 = (instruction >> 8) & 0xF;//shift right 8 bits to isolate the second 4 bits for operand 1
         operand2 = instruction & 0xFF;//just make and operation with 0xFF which is 11111111 to isolate the last 8 bits which is operand2 
     }
-
     void execute(int opcode, int operand1, int operand2) {
         switch (opcode) {
         case 0x1: // LOAD
@@ -59,7 +57,7 @@ public:
 
         case 0x2:
             
-            // LOAD (immediate)
+        // LOAD (immediate)
             registers[operand1] = operand2;
             break;
 
